@@ -26,9 +26,16 @@ git merge brachname     #将brachname和当前分支合并，注意可能会出�
 
 git remote add ... .......    #在本地其远程库别名...
 
-git clone 远程地址
+git clone 远程地址            #从远程库中克隆到本地
 
-git fetch 别名 brachname      #抓取到本地库
+git push 别名 brachname       #想远程库推送
+
+git fetch 别名 brachname      #抓取到本地库，再用merge进行合并
+
+git pull 别名 brachname       #直接拉取，相当于fech+merge
+
+/*若操作到了同一个文件的同一位置的数据，则进行推送时则会报错，推送失败*/
+/*应该先pull下来再进行人为解决冲突，解决后进行commit时不同增加文件名*/
 
 
 
