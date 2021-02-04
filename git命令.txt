@@ -1,0 +1,42 @@
+git init        #初始化git仓库
+
+git add file    #添加文件进暂存区
+
+git commit -m "...备注..." file   #将暂存区的文件添加到本地仓库
+
+git status      #查看工作区和暂存区的文件状态
+
+git log         #查看git中流程详细状态
+
+git reflog      #简化流程显示
+
+git reset --hard hashcode      #回滚到hashcode代表的位置（本地库，暂存区，工作区一起更新）
+
+/*删除工作区的文件时要注意，若已提交那么暂存区和工作区的文件都不会改变状态，执行git add file才会跟新到暂存区，执行git commit file跟新到本地库*/
+
+git diff ... ...      #比较两文件（hashcode）状态，git是按照 行 为单位操作文件
+
+git brach -v     #查看目前的各分支，及（*）位置
+
+git brach brachname    #创建分支brachname
+
+git checkout brachname       #切换到分支brachname
+
+git merge brachname     #将brachname和当前分支合并，注意可能会出现冲突，发生冲突后要add再commit，其中commit时不能增加文件名
+
+git remote add ... .......    #在本地其远程库别名...
+
+git clone 远程地址            #从远程库中克隆到本地
+
+git push 别名 brachname       #想远程库推送
+
+git fetch 别名 brachname      #抓取到本地库，再用merge进行合并
+
+git pull 别名 brachname       #直接拉取，相当于fech+merge
+
+/*若操作到了同一个文件的同一位置的数据，则进行推送时则会报错，推送失败*/
+/*应该先pull下来再进行人为解决冲突，解决后进行commit时不同增加文件名*/
+
+
+
+
