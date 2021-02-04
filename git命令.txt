@@ -21,3 +21,15 @@ git brach -v     #查看目前的各分支，及（*）位置
 git brach brachname    #创建分支brachname
 
 git checkout brachname       #切换到分支brachname
+
+git merge brachname     #将brachname和当前分支合并，注意可能会出现冲突，发生冲突后要add再commit，其中commit时不能增加文件名
+
+git remote add ... .......    #在本地其远程库别名...
+
+git clone 远程地址
+
+git fetch 别名 brachname      #抓取到本地库
+
+
+
+
